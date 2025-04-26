@@ -16,48 +16,41 @@ const HomeSection3 = () => {
       image: Image1,
       title: "Seamless integrations with your app tools",
       link: "#",
-      description: "Connect all your favorite apps in just a few clicks."
     },
     {
       id: 2,
       image: Image2,
       title: "Intuitive dashboard for at-a-glance insights",
       link: "#",
-      description: "Get real-time data visualization for quick decisions."
     },
     {
       id: 3,
       image: Image3,
       title: "Get more value from your tools",
       link: "#",
-      description: "Maximize productivity with smart automation."
     },
     {
       id: 4,
       image: Image4,
       title: "Enrich Data with Risk Management",
       link: "#",
-      description: "Identify and mitigate risks before they happen."
     },
     {
       id: 5,
       image: Image5,
       title: "Scalable plans to fit any business size",
       link: "#",
-      description: "Grow with flexible pricing options."
     },
     {
       id: 6,
       image: Image6,
       title: "Automated data analysis and reporting",
       link: "#",
-      description: "Save hours with automated reports."
     }
   ];
 
   return (
-    <section className="relative bg-[#0F6073] rounded-3xl p-[50px] my-20 mx-4 md:mx-8 lg:mx-16 shadow-[0_10px_30px_rgba(0,0,0,0.2)] overflow-hidden mb-20">
-      <div className="absolute bottom-[-30px] left-[-30px] w-[150px] h-[150px] rounded-full bg-[radial-gradient(circle,rgba(193,254,180,0.15)_0%,rgba(193,254,180,0)_70%)]"></div>
+    <section className="relative bg-[#0F6073] rounded-3xl p-[30px] my-20 mx-4 md:mx-8 lg:mx-16 md:p-[50px] shadow-[0_10px_30px_rgba(0,0,0,0.2)] overflow-hidden mb-20">      <div className="absolute bottom-[-30px] left-[-30px] w-[150px] h-[150px] rounded-full bg-[radial-gradient(circle,rgba(193,254,180,0.15)_0%,rgba(193,254,180,0)_70%)]"></div>
 
       <div className="max-w-[1500px] mx-auto flex flex-col items-center text-center relative z-10">
         <motion.span
@@ -65,7 +58,7 @@ const HomeSection3 = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-[#C1FEB4] text-[#1A1A1A] px-5 py-2 rounded-full font-bold text-sm mb-6 inline-block tracking-wider uppercase md:text-[15px] md:px-6 md:py-[10px]"
+          className="bg-[#C1FEB4] text-[#1A1A1A] px-5 py-2 rounded-full font-bold text-sm mb-6 inline-block tracking-wider  md:text-[15px] md:px-6 md:py-[5px]"
         >
           Main Features
         </motion.span>
@@ -75,10 +68,11 @@ const HomeSection3 = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
-          className="text-white text-[2.3rem] mb-6 leading-tight font-bold tracking-tight md:text-[3.5rem] lg:text-[4rem]"
+          className="text-white text-[2rem] mb-6 leading-8 font-bold tracking-tight  lg:text-[4rem] lg:leading-snug"
         >
-          Automate your workflow with our <span className="text-[#C1FEB4] relative inline-block">
-            <span className="relative z-10">1000+ apps integrations</span>
+          Automate your workflow with our 
+          <span className="text-[#C1FEB4] relative inline-block">
+            1000+ apps integrations
           </span>
         </motion.h1>
 
@@ -92,7 +86,7 @@ const HomeSection3 = () => {
           Connect your tools, connect your teams with Lexend.
         </motion.p>
 
-        <div className="grid grid-cols-1 gap-8 w-full mb-[60px] md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 w-full mb-[60px] md:grid-cols-2 lg:grid-cols-2 md:gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={feature.id}
@@ -100,7 +94,7 @@ const HomeSection3 = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-[#252525] rounded-2xl p-8 md:p-10 transition-all duration-300 ease-in-out flex flex-col items-center relative overflow-hidden border border-[#333] hover:translate-y-[-8px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:border-[#C1FEB4] group"
+              className="bg-[#252525] rounded-2xl p-2 md:p-3 transition-all duration-300 ease-in-out flex flex-col items-center relative overflow-hidden border border-[#333] hover:translate-y-[-8px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] hover:border-[#C1FEB4] group"
             >
 
               {/* خلفية متداخلة جميلة */}
@@ -110,21 +104,20 @@ const HomeSection3 = () => {
               <div className="absolute top-0 left-0 w-full h-1 bg-[#C1FEB4] origin-left scale-x-0 transition-transform duration-300 ease-in-out group-hover:scale-x-100 z-10"></div>
 
               {/* الصورة */}
-              <div className="mb-8 px-5 transition-transform duration-300 ease-in-out group-hover:scale-110 z-10">
-                <img 
-                  src={feature.image} 
-                  alt={feature.title} 
-                  className="w-full max-w-[220px] h-auto object-contain grayscale-[20%] transition-all duration-300 ease-in-out group-hover:grayscale-0 rounded-xl shadow-lg"
+              <div className="mb-8 px-1 transition-transform duration-300 ease-in-out  z-10">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full max-w-[300px] pt-3 h-auto object-contain  transition-all duration-300 ease-in-out group-hover:grayscale-0 rounded-xl shadow-lg"
                   loading="lazy"
                 />
               </div>
 
               {/* محتوى النص */}
-              <div className="text-center z-10">
-                <h3 className="text-white text-[1.6rem] mb-5 font-semibold leading-snug">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <a href={feature.link} className="text-[#C1FEB4] font-semibold inline-flex items-center gap-2 transition-all duration-300 ease-in-out relative hover:text-white">
-                  Learn more 
+              <div className=" z-10">
+                <h3 className="text-white text-[1.6rem] pl-4 text-start mb-5  font-semibold leading-snug">{feature.title}</h3>
+                <a href={feature.link} className="text-[#C1FEB4] font-semibold pb-5 inline-flex  gap-2 transition-all duration-300 ease-in-out relative hover:text-white">
+                  Learn more
                   <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-2">→</span>
                   <span className="absolute bottom-[-2px] left-0 w-0 h-0.5 bg-[#C1FEB4] transition-all duration-300 ease-in-out group-hover:w-full"></span>
                 </a>

@@ -117,27 +117,48 @@ const HomeSection5 = () => {
       </div>
 
       <div className="flex justify-center mb-12">
-        <div className="flex bg-white/10 backdrop-blur-sm rounded-2xl p-1">
-          <button
-            onClick={() => setActivePlan('monthly')}
-            className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${activePlan === 'monthly'
-              ? 'bg-[#C1FEB4] text-[#1A1A1A] shadow-lg'
-              : 'bg-transparent text-white hover:bg-white/5'
-              }`}
-          >
-            Monthly Billing
-          </button>
-          <button
-            onClick={() => setActivePlan('yearly')}
-            className={`px-8 py-3 ml-2 rounded-xl font-semibold transition-all duration-300 ${activePlan === 'yearly'
-              ? 'bg-[#C1FEB4] text-[#1A1A1A] shadow-lg'
-              : 'bg-transparent text-white hover:bg-white/5'
-              }`}
-          >
-            Yearly Billing <span className="text-[#C1FEB4]">(Save 20%)</span>
-          </button>
-        </div>
-      </div>
+  <div className="flex bg-white/10 backdrop-blur-sm rounded-2xl p-1 border border-[#2C5058]">
+    <button
+      onClick={() => setActivePlan('monthly')}
+      className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden ${
+        activePlan === 'monthly'
+          ? 'bg-[#C1FEB4] text-[#1A1A1A] shadow-lg'
+          : 'bg-transparent text-white hover:bg-white/5'
+      }`}
+    >
+      <span className="relative z-10">Monthly Billing</span>
+      {activePlan === 'monthly' && (
+        <motion.span
+          layoutId="activePlanBg"
+          className="absolute inset-0 bg-[#C1FEB4] rounded-xl z-0"
+          initial={false}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        />
+      )}
+    </button>
+    
+    <button
+      onClick={() => setActivePlan('yearly')}
+      className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 relative overflow-hidden ${
+        activePlan === 'yearly'
+          ? 'bg-[#C1FEB4] text-[#1A1A1A] shadow-lg'
+          : 'bg-transparent text-white hover:bg-white/5'
+      }`}
+    >
+      <span className="relative z-10">
+        Yearly Billing <span className="text-[#0a5c07] font-medium">(Save 20%)</span>
+      </span>
+      {activePlan === 'yearly' && (
+        <motion.span
+          layoutId="activePlanBg"
+          className="absolute inset-0 bg-[#C1FEB4] rounded-xl z-0"
+          initial={false}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+        />
+      )}
+    </button>
+  </div>
+</div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {pricingPlans[activePlan].map((plan, index) => (
@@ -198,7 +219,7 @@ const HomeSection5 = () => {
         ))}
       </div>
 
-      <p className='text-center py-24 text-gray-500 text-lg'>
+      <p className='text-center py-10 text-gray-500 text-lg'>
         *Yearly discount available on select plans.
       </p>
     </div>

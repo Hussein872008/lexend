@@ -72,8 +72,7 @@ const HomeSection2 = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={cardVariants}
-            whileHover={{ scale: 1.05 }}
-            className="feature-card cursor-pointer"
+            className="feature-card "
           >
             <img
               src={card.icon}
@@ -106,8 +105,7 @@ const HomeSection2 = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={logoVariants}
-            whileHover={{ scale: 1.1 }}
-            className="logo-container cursor-pointer"
+            className="logo-container "
           >
             <img
               src={logo.src}

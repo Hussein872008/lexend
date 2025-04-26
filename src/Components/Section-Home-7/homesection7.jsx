@@ -32,8 +32,7 @@ const HomeSection7 = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto py-12 mb-20 px-4 md:px-8 lg:px-16">
-      {/* العنوان في الشمال (اليسار) */}
+    <div className="max-w-4xl mx-auto  mb-20 px-4 md:px-8 lg:px-16">
       <h1 className='text-4xl md:text-5xl font-bold text-white mb-10 text-left'>
         Frequently asked questions!
       </h1>

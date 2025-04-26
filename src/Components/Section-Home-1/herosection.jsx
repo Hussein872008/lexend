@@ -520,11 +520,11 @@ const HeroSection = () => {
   ];
 
   return (
-<div className='home-section-1 mb-20'>
-<nav className={`nav-home-1 flex items-center text-[20px] justify-between px-16 py-7 transition-all duration-300 fixed top-0 left-0 w-full z-50
-  ${showNavbar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}
-  ${notAtTop && showNavbar ? 'bg-[#052128]/90 backdrop-blur-sm shadow-md' : ''}
-`}>
+    <div className='home-section-1 mb-20'>
+      <nav className={`nav-home-1 flex items-center text-[20px] justify-between px-16 py-7 transition-all duration-300 fixed top-0 left-0 w-full z-50
+        ${showNavbar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}
+        ${notAtTop && showNavbar ? 'bg-[#052128]/90 backdrop-blur-sm shadow-md' : ''}
+      `}>
         {isMobileView && (
           <button
             onClick={toggleSidebar}
